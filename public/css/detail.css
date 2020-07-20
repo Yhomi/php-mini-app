@@ -1,0 +1,30 @@
+.myCard {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid black;
+    padding: 20px;
+    background: #fff;
+}
+
+.myCard h1 {
+    text-align: center;
+    color: aqua;
+}
+
+.myCard h4 {
+    margin: 30px 20px;
+    color: blueviolet;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border: 1px solid #eee;
+}
+
+.box {
+    width: 70%;
+    margin: 20px;
+    border: 1px solid #eee;
+}

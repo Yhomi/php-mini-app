@@ -1,0 +1,187 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px 15%;
+    font-size: 17px;
+}
+
+.inputClass {
+    padding: 10px;
+    border: 1px solid #E5E5E5;
+    width: 300px;
+    color: #999999;
+    border-radius: 10px;
+    height: 40px;
+}
+
+.inputClass:hover,
+.inputClass:focus {
+    border-color: 1px solid #C9C9C9;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+}
+
+.form label {
+    margin-left: 10px;
+    color: #999999;
+}
+
+
+/* ===========================
+   ====== Submit Button ====== 
+   =========================== */
+
+.submit {
+    width: 200px;
+    height: 40px;
+    background-color: #474E69;
+    cursor: pointer;
+    margin-left: 200px;
+    color: #FFF;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+form header {
+    margin: 0 0 20px 0;
+}
+
+form header div {
+    font-size: 90%;
+    color: #999;
+}
+
+form header h2 {
+    margin: 0 0 5px 0;
+}
+
+form>div {
+    clear: both;
+    overflow: hidden;
+    padding: 1px;
+    margin: 0 0 10px 0;
+}
+
+form>div>fieldset>div>div {
+    margin: 0 0 5px 0;
+}
+
+form>div>label,
+legend {
+    width: 25%;
+    float: left;
+    padding-right: 10px;
+}
+
+form>div>div,
+form>div>fieldset>div {
+    width: 75%;
+    float: right;
+}
+
+form>div>fieldset label {
+    font-size: 90%;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+textarea {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password] {
+    width: 50%;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+textarea:focus {
+    outline: 0;
+    border-color: #4697e4;
+}
+
+@media (max-width: 600px) {
+    form>div {
+        margin: 0 0 15px 0;
+    }
+    form>div>label,
+    legend {
+        width: 100%;
+        float: none;
+        margin: 0 0 5px 0;
+    }
+    form>div>div,
+    form>div>fieldset>div {
+        width: 100%;
+        float: none;
+    }
+    input[type=text],
+    input[type=email],
+    input[type=url],
+    input[type=password],
+    textarea,
+    select {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    form>div>label,
+    legend {
+        text-align: right;
+    }
+}
+
+.date {
+    margin-left: 150px;
+    margin-top: 10px;
+}
+
+.date p {
+    float: left;
+    margin-right: 20px;
+}
+
+.file {
+    margin-left: 150px;
+}
+
+.file p {
+    float: left;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+@media(max-width:500px) {
+    .date {
+        margin-left: 10px;
+    }
+    .file {
+        margin-left: 10px;
+    }
+    .submit {
+        margin-left: 10px;
+    }
+}

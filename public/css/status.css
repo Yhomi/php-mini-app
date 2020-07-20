@@ -1,0 +1,32 @@
+.myCard {
+    /* border: 1px solid gray; */
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #eee;
+}
+
+.myCard h1 {
+    text-align: center;
+    color: cornflowerblue;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border: 1px solid #eee;
+}
+
+.myCard h4 {
+    margin: 30px 20px;
+    color: blueviolet;
+}
+
+.myCard li {
+    list-style: none;
+    border: 1px solid #333;
+    background: #eee;
+    margin: 20px 10px;
+    padding: 10px;
+}

@@ -1,0 +1,47 @@
+.card {
+    width: 60%;
+    height: 500px;
+    background: #E5E5E5;
+    border: 1px solid black;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.cardBody h2 {
+    margin: 30px 20px;
+}
+
+.cardBody h4 {
+    margin: 30px 20px;
+}
+
+.cardBody p {
+    margin: 30px 20px;
+}
+
+.status {
+    text-decoration: none;
+    width: 54px;
+    height: 23px;
+    background: salmon;
+    border: 1px solid #ccc;
+    padding: 15px 27px;
+    color: red;
+    margin: 50px;
+}
+
+.app {
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.detail {
+    text-decoration: none;
+    width: 54px;
+    height: 23px;
+    background: salmon;
+    border: 1px solid #E5E5E5;
+    padding: 15px 27px;
+    color: red;
+    margin: 20px;
+}
