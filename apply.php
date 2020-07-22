@@ -1,12 +1,12 @@
 <?php
     session_start();
     require_once('dbConfig/auth.php');
-    if(!isset($_SESSION['email'])){
-        header("Location:index.php");
+    if(!isset($_SESSION['token'])){
+        header("Location:login.php");
         die;
     }
-    print_r($_SESSION);
-    $email = $_SESSION['email'];
+    
+    $token = $_SESSION['token'];
     // $token = $_SESSION['token'];
     $db = new Auth();
     $msg='';
@@ -46,7 +46,7 @@
                         $fileNameNew = uniqid('', true).".".$fileActualExt;
                         $fileDestination= 'uploads/'.$fileNameNew;
                         move_uploaded_file($fileTmpName, $fileDestination);
-                        if ($db->insertData($firstName,$lastName,$address,$maritalStatus,$education,$subject,$religion,$state,$dob,$fileNameNew,$email)) {
+                        if ($db->insertData($firstName,$lastName,$address,$maritalStatus,$education,$subject,$religion,$state,$dob,$fileNameNew,$token)) {
                         
                             header("Location:confirm.php");
                         }else {
@@ -92,20 +92,20 @@
         <div>
             <label class="desc" id="title1" for="Field1">First Name:</label>
             <div>
-                <input id="Field1" name="first_name" type="text" class="field inputClass text fn" value="" required>
+                <input id="Field1" name="first_name" type="text" class="field inputClass text fn"  value="<?php echo isset($_POST['first_name'])? $firstName : '' ?> " required>
             </div>
         </div>
 
         <div>
             <label class="desc" id="title3" for="Field3">Last Name:</label>
             <div>
-                <input id="Field3" name="last_name" type="text" class="inputClass" value="" required>
+                <input id="Field3" name="last_name" type="text" class="inputClass"  value="<?php echo isset($_POST['last_name'])? $lastName : '' ?> " required>
             </div>
         </div>
         <div>
             <label class="desc" id="title3" for="Field3">Address:</label>
             <div>
-                <input id="Field3" name="address" type="text" class="inputClass" value="" required>
+                <input id="Field3" name="address" type="text" class="inputClass"  value="<?php echo isset($_POST['address'])? $address : '' ?> " required>
             </div>
         </div>
 
@@ -134,7 +134,7 @@
            Education
           </label>
             <div>
-                <input id="Field3" name="education" type="text" class="inputClass" value="" required>
+                <input id="Field3" name="education" type="text" class="inputClass"  value="<?php echo isset($_POST['education'])? $education : '' ?> " required>
             </div>
         </div>
 

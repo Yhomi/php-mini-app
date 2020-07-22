@@ -2,7 +2,7 @@
 session_start();
     require_once('dbConfig/emailController.php');
     require_once('dbConfig/auth.php');
-    if(isset($_SESSION['email'])){
+    if(isset($_SESSION['token'])){
         header("Location:confirm.php");
         die;
     }
@@ -22,8 +22,7 @@ session_start();
            $db->saveUserEmail($email,$token);
                  $_SESSION['msg']="Please Check your Email for the token";
                 $_SESSION['msgClass']= 'success';
-                $_SESSION['email'] = $email;
-                $_SESSION['token'] = $token;
+               
                 sendToken($email,$token);
                 
                 header('Location:login.php');

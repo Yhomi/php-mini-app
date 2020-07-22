@@ -11,23 +11,33 @@
   $msg="";
   $msgClass="";
     if(isset($_POST['submit'])){
+        // validation
         if(empty($_POST['token'])){
             $msg="Field cannot be empty";
             $msgClass="warning";
         }else {
+            // clean space, slashes,html entities
             $token = $db->cleanInput($_POST['token']);
             if($db->checkToken($token)){
-                $_SESSION['token'] = $token;
-               header('Location:apply.php');
+                // check if the token is available and if user already completes its application
+               $msg='You have not complete your application visit <a href="login.php">Login</a>';
+               $msgClass= "warning";
+               
             }else{
-               $msg = "Token does not match";
-               $msgClass ="warning";
+                // check if the token is available and confirm all application fields have been submited
+               if($db->tokenConfirm($token)){
+                   $_SESSION['token'] = $token;
+                   header('Location:confirm.php');
+               }else{
+                   $msg = "Token does not match";
+                   $msgClass ="warning";
+               }
             }
         }
 
         
     }
-
+    
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +70,6 @@
                     </div>
                 </form>
         </div>
-            
         </div>
     </div>
 </div>

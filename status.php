@@ -1,16 +1,16 @@
 <?php
     session_start();
     require_once('dbConfig/auth.php');
-    if(!isset($_SESSION['email'])){
-        header("Location:index.php");
+    if(!isset($_SESSION['token'])){
+        header("Location:login.php");
         die;
     }
     
     $db = new Auth();
-    $email = $_SESSION['email'];
+    
     $token = $_SESSION['token'];
-    print_r($_SESSION);
-    $data = $db->fetchData($email,$token);
+   
+    $data = $db->fetchData($token);
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./public/css/status.css">
 </head>
 <body>
+    <a href="confirm.php" class="btn btn-secondary float-left ml-2 mt-5 mb-2">Back</a>
     <div class="myCard">
         <h1>APPLICANT’S STATUS</h1>
         <div class="img">
@@ -32,5 +33,8 @@
         <h4>I live at “<?php echo $data->adress; ?>” and I was born on “ <?php echo $data->dob; ?>.”</h4>
         <h4>My favourite subjects are: <?php echo $data->best_subject; ?></h4>
     </div>
+
+    <a href="apply.php" class="btn btn-primary float-left  mb-2 ml-5">Apply</a>
+    <a href="logout.php" class="btn btn-danger float-right mb-2 mr-5">Logout</a>
 </body>
 </html>

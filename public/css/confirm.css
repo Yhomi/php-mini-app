@@ -1,5 +1,5 @@
-.card {
-    width: 60%;
+.myCard {
+    width: 65%;
     height: 500px;
     background: #E5E5E5;
     border: 1px solid black;
@@ -45,3 +45,40 @@
     color: red;
     margin: 20px;
 }
+
+.cardBody a:hover {
+    text-decoration: none;
+    line-height: 23px;
+    color: red;
+}
+
+
+/* .log {
+    width: 40px;
+    height: 23px;
+    border: 1px solid #eee;
+    padding: 10px 23px;
+    background: cornflowerblue;
+    text-decoration: none;
+    cursor: pointer;
+    color: brown;
+    margin-left: 200px;
+    margin-top: 30px;
+    float: left;
+    font-size: 17px;
+}
+
+.apply {
+    width: 40px;
+    height: 23px;
+    border: 1px solid #eee;
+    padding: 10px 23px;
+    background: rgb(31, 32, 30);
+    text-decoration: none;
+    cursor: pointer;
+    color: purple;
+    margin-left: 700px;
+    margin-top: 30px;
+    float: left;
+    font-size: 17px;
+} */
